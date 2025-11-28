@@ -41,6 +41,7 @@ public class Book {
         return isAvailable;
     }
 
+
     public void setAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
     }

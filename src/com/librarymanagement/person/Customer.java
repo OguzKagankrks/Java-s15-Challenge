@@ -5,13 +5,25 @@ import java.util.Set;
 
 public class Customer extends Person {
 
+    private Set<Book> borrowedBooks = new HashSet<>();
 
-    public void borrowBook(Book book){
-
+    public boolean borrowBook(Book book) {
+        if (book == null) {
+            return false;
+        }
+        return borrowedBooks.add(book);
     }
 
-    public void returnBook(Book book){
 
+        public boolean returnBook(Book book) {
+            if (book == null) {
+                return false;
+            }
+            return borrowedBooks.remove(book);
+        }
+
+    public Set<Book> getBorrowedBooks() {
+        return borrowedBooks;
     }
 
     public Customer(String name, String password) {
@@ -24,7 +36,7 @@ public class Customer extends Person {
         return "Customer";
     }
 
-    private Set<Book> borrowedBooks = new HashSet(); // set kullanılmasının sebebi aynı kitabın tekrar eklenmesini engellemek
+
 
 
 

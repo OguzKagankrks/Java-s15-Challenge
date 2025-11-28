@@ -27,7 +27,4 @@ public class Author extends Person {
         writtenBooks.add(book);
     }
 
-    // @Override hashCode , toString , Equals
-
-
 }
